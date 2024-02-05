@@ -11,29 +11,13 @@
         <ul
           class="navbar-nav d-flex justify-content-between align-items-center w-100 px-5"
         >
-          <li class="nav-item text-truncate">
-            <a href="#" class="aria-current='page' text-decoration-none">
-              <span>Empleos</span>
-            </a>
-          </li>
-          <li class="nav-item text-truncate">
-            <a href="#" class="aria-current='page' text-decoration-none">
-              <span>Bootcamp</span>
-            </a>
-          </li>
-          <li class="nav-item text-truncate">
-            <a href="#" class="aria-current='page' text-decoration-none">
-              <span>Sobre nosotros</span>
-            </a>
-          </li>
-          <li class="nav-item text-truncate">
-            <a href="#" class="aria-current='page' text-decoration-none">
-              <span>Para profesionales</span>
-            </a>
-          </li>
-          <li class="nav-item text-truncate">
-            <a href="#" class="aria-current='page' text-decoration-none">
-              <span>Para empresas</span>
+          <li
+            v-for="(itemMenu, index) in menu"
+            :key="index"
+            class="nav-item text-truncate"
+          >
+            <a href="#" class="text-decoration-none">
+              <span class="text-black">{{ itemMenu }}</span>
             </a>
           </li>
         </ul>
@@ -45,11 +29,7 @@
 <script>
 export default {
   name: "job-menu",
-  props: {},
+  props: { menu: Array },
 };
 </script>
-<style>
-span {
-  color: black;
-}
-</style>
+<style></style>

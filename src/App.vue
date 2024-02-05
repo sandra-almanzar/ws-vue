@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="m-0">
-    <job-menu></job-menu>
+    <job-menu :menu="menu"></job-menu>
     <div v-for="(job, index) in jobs" :key="index">
       <job-card :job="job" />
     </div>
@@ -94,6 +94,13 @@ export default {
           vacancies: "1 Vacante",
           calendar: "6 days ago",
         },
+      ],
+      menu: [
+        "Empleos",
+        "Bootcamp",
+        "Sobre nosotros",
+        "Para profesionales",
+        "Para empresas",
       ],
     };
   },
