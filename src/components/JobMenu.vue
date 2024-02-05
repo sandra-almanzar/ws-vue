@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bg-white" style="height: 15vh">
+  <div class="bg-white" style="height: 15vh">
     <nav class="navbar shadow px-2 py-0 navbar-light bg-light navbar-expand-lg">
       <a href="#" class="order-0">
         <img height="60" src="../assets/logo-blue.png" alt="logo-peaku" />
@@ -12,7 +12,7 @@
           class="navbar-nav d-flex justify-content-between align-items-center w-100 px-5"
         >
           <li class="nav-item text-truncate">
-            <a href="#" class="aria-current='page' active text-decoration-none">
+            <a href="#" class="aria-current='page' text-decoration-none">
               <span>Empleos</span>
             </a>
           </li>

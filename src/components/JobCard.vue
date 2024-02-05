@@ -2,7 +2,9 @@
   <div class="my-container mb-3 border">
     <div class="card-body p-2 p-md-3">
       <div class="row align-items-center">
-        <div class="justify-content-center align-items-center col-md-1 col-3">
+        <div
+          class="d-flex justify-content-center align-items-center col-md-1 col-3"
+        >
           <img
             :src="job.img"
             alt="Company logo"
@@ -13,12 +15,12 @@
         </div>
         <div class="col-md-11 col-9">
           <div class="row align-items-center">
-            <div class="mb-2 col">
+            <div class="mb-2 col ps-0">
               <a
                 href="#"
                 class="container-fluid text-dark d-inline d-md-inline-flex text-decoration-none"
               >
-                <h1 class="font-weight-bold pl-md-2 pr-md-2 mb-0 pb-0">
+                <h1 class="font-weight-bold pl-md-2 pr-md-2 mb-0 pb-0 me-3">
                   {{ job.name }}
                 </h1>
                 <section
@@ -37,27 +39,29 @@
             </div>
           </div>
           <div
-            class="row pl-md-2 mt-1 flex-column flex-md-row"
+            class="row container-fluid pl-md-2 mt-1 flex-column flex-md-row"
             style="font-size: 0.9em"
           >
-            <div class="text-truncate text-capitalize col">
-              <i class="bi bi-buildings"></i>
+            <div
+              class="text-truncate text-capitalize col d-flex justify-content-start ms-0 ps-0"
+            >
+              <i class="bi bi-buildings pe-1"></i>
               <span class="pe-2">{{ job.company }}</span>
             </div>
-            <div class="text-truncate col">
-              <i class="bi bi-geo-alt"></i>
+            <div class="text-truncate col d-flex justify-content-start">
+              <i class="bi bi-geo-alt pe-1"></i>
               <span>{{ job.city }}</span>
             </div>
-            <div class="text-truncate col">
-              <i class="bi bi-cash-stack"></i>
+            <div class="text-truncate col d-flex justify-content-start">
+              <i class="bi bi-cash-stack pe-1"></i>
               <span>{{ job.salary }}</span>
             </div>
-            <div class="text-truncate col">
-              <i class="bi bi-people"></i>
+            <div class="text-truncate col d-flex justify-content-start">
+              <i class="bi bi-people pe-1"></i>
               <span>{{ job.vacancies }}</span>
             </div>
-            <div class="text-truncate col">
-              <i class="bi bi-calendar3"></i>
+            <div class="text-truncate col d-flex justify-content-start">
+              <i class="bi bi-calendar3 pe-1"></i>
               <span>{{ job.calendar }}</span>
             </div>
           </div>
@@ -77,7 +81,7 @@ export default {
 </script>
 <style>
 h2 {
-  font-family: sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 .my-container:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
