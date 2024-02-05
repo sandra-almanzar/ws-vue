@@ -3,7 +3,7 @@
     <div class="card-body p-2 p-md-3">
       <div class="row align-items-center">
         <div
-          class="d-flex justify-content-center align-items-center col-md-1 col-3"
+          class="col-md-1 col-3 d-flex justify-content-center align-items-center"
         >
           <img
             :src="job.img"
@@ -20,11 +20,11 @@
                 href="#"
                 class="container-fluid text-dark d-inline d-md-inline-flex text-decoration-none"
               >
-                <h1 class="font-weight-bold pl-md-2 pr-md-2 mb-0 pb-0 me-3">
+                <h2 class="font-weight-bold pl-md-2 pr-md-2 mb-0 pb-0 me-3">
                   {{ job.name }}
-                </h1>
+                </h2>
                 <section
-                  class="pl-md-2 d-inline d-md-inline-flex align-items-center text-truncate"
+                  class="text-truncate pl-md-2 d-inline d-md-inline-flex align-items-center"
                 >
                   <div
                     class="text-truncate border border-dark text-dark text-capitalize m-1 p-1 rounded-2"
@@ -80,10 +80,8 @@ export default {
 };
 </script>
 <style>
-h2 {
-  font-family: Montserrat, sans-serif;
-}
 .my-container:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 </style>

@@ -51,6 +51,5 @@ export default {
 <style>
 span {
   color: black;
-  font-size: 18px;
 }
 </style>
