@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" class="m-0">
+    <job-menu></job-menu>
     <div v-for="(job, index) in jobs" :key="index">
       <job-card :job="job" />
     </div>
@@ -8,11 +9,13 @@
 
 <script>
 import JobCard from "./components/JobCard.vue";
+import JobMenu from "./components/JobMenu.vue";
 
 export default {
   name: "App",
   components: {
     "job-card": JobCard,
+    "job-menu": JobMenu,
   },
   data() {
     return {
