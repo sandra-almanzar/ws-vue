@@ -3,11 +3,13 @@
     <header>
       <job-menu :menu="menu"></job-menu>
     </header>
-    <main class="row">
-      <aside class="col-1 p-0 borde-derecho">
+    <main>
+      <aside
+        class="p-0 h-100 border-end aside-menu d-flex flex-column position-fixed"
+      >
         <left-menu :leftMenu="leftMenu"></left-menu>
       </aside>
-      <div class="container-fluid col">
+      <div class="p-content d-block position-relative p-3">
         <div v-for="(job, index) in jobs" :key="index">
           <job-card :job="job" />
         </div>
@@ -138,14 +140,18 @@ export default {
 </script>
 
 <style>
+.aside-menu {
+  width: 90px;
+}
+.p-content {
+  left: 90px;
+  width: calc(100vw - 105px);
+}
 #app {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
-}
-.borde-derecho {
-  border-right: 1px solid #dee2e6 !important;
 }
 </style>

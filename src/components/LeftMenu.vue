@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column collapsed border-right">
+  <div class="d-flex flex-column align-items-center collapsed border-right">
     <ul class="nav mt-2 flex-column">
       <li
         v-for="(itemLeft, index) in leftMenu"
@@ -7,8 +7,8 @@
         class="nav-item position-relative"
       >
         <a href="#" class="nav-link active">
-          <i :class="itemLeft.icono" class="bi-3x mx-2 icono d-block"> </i>
-          <span class="text-dark fw-bold item pt-0.5em text-truncate">{{
+          <i :class="itemLeft.icono" class="icono d-block"> </i>
+          <span class="text-black fw-bold item text-truncate">{{
             itemLeft.nombre
           }}</span>
         </a>
@@ -24,7 +24,6 @@ export default {
 </script>
 <style>
 .icono {
-  width: "10px", height= "10px";
   color: black;
 }
 .item {
