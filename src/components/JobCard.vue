@@ -20,49 +20,65 @@
                 href="#"
                 class="container-fluid text-dark d-inline d-md-inline-flex text-decoration-none"
               >
-                <h2 class="font-weight-bold pl-md-2 pr-md-2 mb-0 pb-0 me-3">
+                <h2
+                  class="fw-semibold pl-md-2 pr-md-2 mb-0 pb-0 me-3 d-flex text-start"
+                >
                   {{ job.name }}
                 </h2>
                 <section
                   class="text-truncate pl-md-2 d-inline d-md-inline-flex align-items-center"
                 >
                   <div
-                    class="text-truncate border border-dark text-dark text-capitalize m-1 p-1 rounded-2"
+                    class="text-truncate text-capitalize border border-dark m-1 p-1 rounded-4"
                     style="font-size: 0.8em"
                     v-for="(requirement, index) in job.requirements"
                     :key="index"
                   >
-                    <span>{{ requirement }}</span>
+                    <span class="fw-bold">{{ requirement }}</span>
                   </div>
                 </section>
               </a>
             </div>
           </div>
           <div
-            class="row container-fluid pl-md-2 mt-1 flex-column flex-md-row"
+            class="row row-cols-6 container-fluid pl-md-2 mt-1 flex-column flex-md-row"
             style="font-size: 0.9em"
           >
             <div
               class="text-truncate text-capitalize col d-flex justify-content-start ms-0 ps-0"
             >
               <i class="bi bi-buildings pe-1"></i>
-              <span class="pe-2">{{ job.company }}</span>
+              <span class="pe-2 fw-bold">{{ job.company }}</span>
             </div>
             <div class="text-truncate col d-flex justify-content-start">
               <i class="bi bi-geo-alt pe-1"></i>
-              <span>{{ job.city }}</span>
+              <span class="fw-bold">{{ job.city }}</span>
             </div>
             <div class="text-truncate col d-flex justify-content-start">
               <i class="bi bi-cash-stack pe-1"></i>
-              <span>{{ job.salary }}</span>
+              <span class="fw-bold">{{ job.salary }}</span>
             </div>
             <div class="text-truncate col d-flex justify-content-start">
               <i class="bi bi-people pe-1"></i>
-              <span>{{ job.vacancies }}</span>
+              <span class="fw-bold">{{ job.vacancies }}</span>
             </div>
             <div class="text-truncate col d-flex justify-content-start">
               <i class="bi bi-calendar3 pe-1"></i>
-              <span>{{ job.calendar }}</span>
+              <span class="fw-bold">{{ job.calendar }}</span>
+            </div>
+            <div
+              v-if="job.tooltipIcons"
+              class="text-truncate col d-flex justify-content-start"
+            >
+              <div
+                v-for="(iconTooltip, index) in job.tooltipIcons"
+                :key="index"
+              >
+                <i
+                  :class="iconTooltip.icon"
+                  class="border border-dark m-1 px-2 rounded-4"
+                ></i>
+              </div>
             </div>
           </div>
         </div>
@@ -75,7 +91,7 @@
 export default {
   name: "job-card",
   props: {
-    job: String,
+    job: Object,
   },
 };
 </script>

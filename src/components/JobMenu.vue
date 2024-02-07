@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white" style="height: 15vh">
+  <div class="bg-white">
     <nav class="navbar shadow px-2 py-0 navbar-light bg-light navbar-expand-lg">
       <a href="#" class="order-0">
         <img height="60" src="../assets/logo-blue.png" alt="logo-peaku" />
@@ -11,13 +11,9 @@
         <ul
           class="navbar-nav d-flex justify-content-between align-items-center w-100 px-5"
         >
-          <li
-            v-for="(itemMenu, index) in menu"
-            :key="index"
-            class="nav-item text-truncate"
-          >
+          <li v-for="(itemMenu, index) in menu" :key="index" class="nav-item">
             <a href="#" class="text-decoration-none">
-              <span class="text-black">{{ itemMenu }}</span>
+              <span class="text-secondary fw-bold">{{ itemMenu }}</span>
             </a>
           </li>
         </ul>
